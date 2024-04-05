@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<section class="gradient-custom">
+    <div class="container my-5 py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="text-center mb-4 pb-2">Actualizar Cita</h4>
+                        <form action="/update/{{appointment.id}}" method="POST">
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" name="fullname" placeholder="Actualice Nombre" value="{{appointment.fullname}}"/>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" name="email" placeholder="Actualice Email" value="{{appointment.email}}"/>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" name="phone" placeholder="Actualice Teléfono" value="{{appointment.phone}}"/>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="date" class="form-control" name="date" placeholder="Seleccione la fecha" value="{{appointment.date}}"/>
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="time" class="form-control" name="hour" placeholder="Seleccione la hora" value="{{appointment.hour}}"/>
+                            </div>
+                            <div class="form-group mb-3">
+                                <select name="service" class="form-control">
+                                    <option value="corte" {% if appointment.service == 'corte' %} selected {% endif %}>Corte de pelo</option>
+                                    <option value="afeitado" {% if appointment.service == 'afeitado' %} selected {% endif %}>Afeitado</option>
+                                    <option value="barba" {% if appointment.service == 'barba' %} selected {% endif %}>Recorte de barba</option>
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary" id="actualizarCita">Actualizar Cita</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

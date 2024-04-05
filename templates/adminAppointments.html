@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<section class="gradient-custom">
+    <div class="container my-5 py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+                <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="text-center mb-4 pb-2">Administrar citas</h4>
+                        {% for appointment in appointments %}
+                        <div class="card mb-3 border-left-primary"> 
+                            <div class="card-header">
+                                <p class="h3">{{appointment.fullname}}</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h5 class="mb-1"><span class="light-text">Fecha:</span> {{appointment.date}}</h5>
+                                    <h5 class="mb-1"><span class="light-text">Hora:</span> {{appointment.hour}}</h5>
+                                    <h5 class="mb-1"><span class="light-text">Servicio:</span> {{appointment.service}}</h5>
+                                </div>
+                                <div class="card-text">
+                                    <h5 class="mb-1"><span class="light-text">Email:</span> {{appointment.email}}</h5>
+                                    <h5><span class="light-text">Teléfono:</span> {{appointment.phone}}</h5>
+                                </div>                                                              
+                                <div class="mt-4">
+                                    <a href="{{ url_for('appointments.update_appointment', id=appointment.id)}}" class="btn btn-primary btn-sm">Actualizar</a>
+                                    <a href="{{ url_for('appointments.delete_appointment', id=appointment.id)}}" class="btn btn-danger btn-sm">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: rgb(217, 217, 217);
+}
+
+.formulario{
+    padding-top: 10px;
+}
+
+.fromularioContenido{
+    padding-bottom: 10px;
+}
+nav{
+    margin-bottom: 50px;
+}
+
+.btn-primary{
+    background-color: #20447c ;
+}
+
+.btn-danger{
+    background-color: crimson ;
+}
+
+.navbar{
+    background-color: #20447c;
+}
+
+.nav-link{
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: rgb(184, 184, 184);
+}
+
+.light-text {
+    font-weight: normal; 
+    color: #6c757d; 
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.bg-dark {
+    background-color: #20447c !important;
+}
+
+.text-warning {
+    color: white !important;
+}
+
+.footer-icons {
+    font-size: 1.5rem; 
+}
+
+.page-container {
+    position: relative;
+    z-index: 1;
+}
+
+.barber-pole {
+    position: absolute; 
+    box-sizing: border-box;
+    margin: 0; 
+    padding-top: 50px;
+    height: 300px;
+    width: 85px;
+    background-color: darkgrey;
+    border-top: 2px solid snow;
+    border-right: 5px solid grey;
+    border-radius: 100px;
+}
+
+.left{
+    top: 500px;
+    left: 20%; 
+}
+
+.right{
+    top: 500px;
+    right: 20%;
+}
+
+.anim-element {
+    position: relative;
+    left: 3px;
+    box-sizing: content-box;
+    height: 200px;
+    width: 75px;
+    background-color: snow;
+    background-image: linear-gradient(-53deg, #20447c  16.667%, snow 16.667%, snow 33.333%, crimson 33.333%, crimson 50%, snow 50%, snow 66.667%, #20447c  66.667%, #20447c  83.333%, snow 83.333%);
+    background-repeat: repeat-y;
+    background-size: cover;
+    animation: spin 3s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        background-position-y: 0px;
+    }
+    
+    100% {
+        background-position-y: 200px;
+    }
+}
