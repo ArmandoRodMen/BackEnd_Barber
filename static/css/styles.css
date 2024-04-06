@@ -12,14 +12,26 @@ body{
 }
 
 .fromularioContenido{
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 nav{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .btn-primary{
-    background-color: #20447c ;
+    background-color: #20447c;
+    border-color: #18458e,
+}
+
+.btn-primary:hover{
+    background-color: #07275a;
+    border-color: #0c2347,
+}
+
+.btn-primary:disabled, 
+.btn-primary.disabled {
+    background-color: rgb(217, 217, 217); 
+    border-color: rgb(217, 217, 217);
 }
 
 .btn-danger{
@@ -79,13 +91,13 @@ footer{
 }
 
 .left{
-    top: 500px;
-    left: 20%; 
+    top: 720px;
+    left: 10%; 
 }
 
 .right{
-    top: 500px;
-    right: 20%;
+    top: 720px;
+    right: 10%;
 }
 
 .anim-element {
